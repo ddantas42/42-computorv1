@@ -6,8 +6,9 @@
 
 typedef struct s_element
 {
-	int term;
+	double term;
 	int power;
+	
 } t_element;
 
 class Equation

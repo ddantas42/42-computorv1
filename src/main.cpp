@@ -12,7 +12,7 @@ static std::string get_equation_from_arg(int argc, char **argv)
 	else if (argc == 2)
 		return equation = std::string(argv[1]);
 	else
-		std::cin >> equation;
+		std::getline(std::cin, equation);
 
 	return equation;
 }

@@ -6,11 +6,21 @@
 static int string_to_first_number(std::string::iterator &it, std::string string)
 {
 	std::string aux_for_number;
-	for ( ; std::isdigit(static_cast<unsigned char>(*it)) && it != string.end(); it++)
+	bool has_dot = false;
+
+	for ( ; (std::isdigit(static_cast<unsigned char>(*it)) || *it == '.') && it != string.end(); it++)
+	{
+		if (*it == '.')
+		{
+			if (has_dot == true)
+				throw std::invalid_argument("2 Dots detected at string to number");
+			has_dot = true;
+		}
 		aux_for_number += *it;
+	}
 
 	std::cout << aux_for_number << std::endl;
-	return std::stoi(aux_for_number);
+	return std::stod(aux_for_number);
 }
 
 static void skip_spaces(std::string::iterator &it)
@@ -97,7 +107,6 @@ void calculate_terms(Equation &Eq)
 		}
 		else
 			throw std::invalid_argument("Not expected character");
-
 	}
 }
 

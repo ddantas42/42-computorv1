@@ -2,10 +2,15 @@
 #include <iostream>
 #include <string>
 
-static bool safe_isdigit(char c)
+// Get's the first number from where the iterator is, and returns it, having advanced the iterator
+static int string_to_first_number(std::string::iterator &it, std::string string)
 {
-	unsigned char casted = static_cast<unsigned char>(c);
-	return std::isdigit(casted);
+	std::string aux_for_number;
+	for ( ; std::isdigit(static_cast<unsigned char>(*it)) && it != string.end(); it++)
+		aux_for_number += *it;
+
+	std::cout << aux_for_number << std::endl;
+	return std::stoi(aux_for_number);
 }
 
 static void skip_spaces(std::string::iterator &it)
@@ -14,32 +19,47 @@ static void skip_spaces(std::string::iterator &it)
 		it++;
 }
 
-
-
-
 static int get_element_term(std::string::iterator &it, std::string equation)
 {
 	int sign = 1;
-	std::string aux_for_number;
 
 	if (*it == '+')
 		it++;
 	else if (*it == '-')
 	{
-		sign = 1;
+		sign = -1;
 		it++;
 	}
 
 	skip_spaces(it);
-
-	for ( ; std::isdigit(static_cast<unsigned char>(*it)) && it != equation.end(); it++)
-		aux_for_number += *it;
-
-	std::cout << aux_for_number << std::endl;
-
-	return std::stoi(aux_for_number) * sign;
+	
+	return string_to_first_number(it, equation) * sign;
 }
 
+// Given the Term A * X^B, This functions make sure we get to B checking everything in between
+static void checks_between_A_and_B(std::string::iterator &it, int term)
+{
+	// Skips spaces towards *
+	skip_spaces(it);
+	if (*it != '*')
+		throw std::invalid_argument("No * after term number " + std::to_string(term));
+	it++;
+
+	// Skips spaces towards X after *
+	skip_spaces(it);
+	
+	// Not allowing spaces in between X and ^ and B
+	if (*it != 'X')
+		throw std::invalid_argument("No X after " + std::to_string(term) + " *");
+	it++;
+	if (*it != '^')
+		throw std::invalid_argument("No ^ after " + std::to_string(term) + " * X");
+	it++;
+	if (*it == '-') // Invalid Negative Power
+		throw std::invalid_argument("- after  " + std::to_string(term) + " * X^");
+		
+	// Finished checking, now B is on the iterator, we can resume getting B
+}
 
 
 void calculate_terms(Equation &Eq)
@@ -49,7 +69,6 @@ void calculate_terms(Equation &Eq)
 
 	for (auto it = Eq.equation.begin(); it != Eq.equation.end(); )
 	{
-		element = {0,0};
 
 		skip_spaces(it);
 
@@ -63,32 +82,15 @@ void calculate_terms(Equation &Eq)
 		// Parsing each term  A * X^B
 		if (*it == '-' || *it == '+' || std::isdigit(static_cast<unsigned char>(*it)))
 		{
+			element = {0,0};
+
 			// Getting the Term A first after the sign
 			element.term = get_element_term(it, Eq.equation);
 			
-
-			// After getting the Term, we skip towards a single *, and skip again to to waiting for an X (variable raised to a power B)
-			skip_spaces(it);
-			if (*it != '*')
-				throw std::invalid_argument("No * after term number " + std::to_string(element.term));
-			it++;
-			skip_spaces(it);
-
-			// Now allowing spaces in between X and ^ and B
-			if (*it != 'X')
-				throw std::invalid_argument("No X after " + std::to_string(element.term) + " *");
-			it++;
-			if (*it != '^')
-				throw std::invalid_argument("No ^ after " + std::to_string(element.term) + " X*");
-			it++;
-
-			std::string aux_for_number;
-			for ( ; std::isdigit(static_cast<unsigned char>(*it)) && it != Eq.equation.end(); it++)
-				aux_for_number += *it;
-
-
-			std::cout << aux_for_number << std::endl;
-			element.power = std::stoi(aux_for_number);
+			// After getting the Term, we skip towards a B, checking between so check for invalid characters
+			checks_between_A_and_B(it, element.term);
+			
+			element.power = string_to_first_number(it, Eq.equation);
 
 			current_terms->push_back(element);
 		}

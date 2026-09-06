@@ -31,6 +31,7 @@ static int get_element_term(std::string::iterator &it, std::string equation)
 		it++;
 	}
 
+	// Skip until number
 	skip_spaces(it);
 	
 	return string_to_first_number(it, equation) * sign;

@@ -1,11 +1,12 @@
 NAME = computor
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -Iinc/
+# CFLAGS = -Wall -Wextra -Werror -Iinc/
+CFLAGS = -Iinc/
 RM = rm -f
 
 SRCDIR = ./src/
 
-FILES = main.cpp equation.cpp
+FILES = main.cpp equation.cpp calculate_terms.cpp
 
 SRC = $(addprefix $(SRCDIR), $(FILES))
 OBJS = $(SRC:.cpp=.o)

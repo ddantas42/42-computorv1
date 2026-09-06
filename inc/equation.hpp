@@ -18,14 +18,16 @@ class Equation
 		Equation(const Equation &other);
 		~Equation();
 
-		const std::string &getEquation() const;
-		void setEquation(const std::string &equation);
+		void calculate_terms();
 
-	private:
-		std::string equation;
 		std::vector<t_element> left_terms;
 		std::vector<t_element> right_terms;
+		std::string equation;
+
+	private:
 		std::string equation_reduced;
 };
+
+void calculate_terms(Equation &Eq);
 
 #endif

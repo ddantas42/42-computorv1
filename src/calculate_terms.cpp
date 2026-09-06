@@ -3,7 +3,7 @@
 #include <string>
 
 // Get's the first number from where the iterator is, and returns it, having advanced the iterator
-static int string_to_first_number(std::string::iterator &it, std::string string)
+static double string_to_first_number(std::string::iterator &it, std::string string, bool allow_doubles)
 {
 	std::string aux_for_number;
 	bool has_dot = false;
@@ -13,7 +13,10 @@ static int string_to_first_number(std::string::iterator &it, std::string string)
 		if (*it == '.')
 		{
 			if (has_dot == true)
-				throw std::invalid_argument("2 Dots detected at string to number");
+				throw std::invalid_argument("2 dots places in one number");
+			if (allow_doubles == false)
+				throw std::invalid_argument("Double now allowed on Power");
+
 			has_dot = true;
 		}
 		aux_for_number += *it;
@@ -29,7 +32,7 @@ static void skip_spaces(std::string::iterator &it)
 		it++;
 }
 
-static int get_element_term(std::string::iterator &it, std::string equation)
+static double get_element_term(std::string::iterator &it, std::string equation)
 {
 	int sign = 1;
 
@@ -44,7 +47,7 @@ static int get_element_term(std::string::iterator &it, std::string equation)
 	// Skip until number
 	skip_spaces(it);
 	
-	return string_to_first_number(it, equation) * sign;
+	return string_to_first_number(it, equation, true) * sign;
 }
 
 // Given the Term A * X^B, This functions make sure we get to B checking everything in between
@@ -71,7 +74,6 @@ static void checks_between_A_and_B(std::string::iterator &it, int term)
 		
 	// Finished checking, now B is on the iterator, we can resume getting B
 }
-
 
 void calculate_terms(Equation &Eq)
 {
@@ -101,7 +103,7 @@ void calculate_terms(Equation &Eq)
 			// After getting the Term, we skip towards a B, checking between so check for invalid characters
 			checks_between_A_and_B(it, element.term);
 			
-			element.power = string_to_first_number(it, Eq.equation);
+			element.power = string_to_first_number(it, Eq.equation, false);
 
 			current_terms->push_back(element);
 		}

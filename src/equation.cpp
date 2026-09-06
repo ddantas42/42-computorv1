@@ -1,5 +1,4 @@
 #include <equation.hpp>
-#include <bits/stdc++.h>
 
 Equation::Equation() : equation("")
 {

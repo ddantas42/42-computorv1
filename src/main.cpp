@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <equation.hpp>
-#
 
 static std::string get_equation_from_arg(int argc, char **argv)
 {
@@ -17,8 +16,7 @@ static std::string get_equation_from_arg(int argc, char **argv)
 	return equation;
 }
 
-static void print_terms(const std::string &name,
-	const std::vector<t_element> &terms)
+static void print_terms(const std::string &name, const std::vector<t_element> &terms)
 {
 	std::cout << name << ":";
 	if (terms.empty())
@@ -28,8 +26,8 @@ static void print_terms(const std::string &name,
 	}
 
 	for (const t_element &element : terms)
-		std::cout << " (term: " << element.term
-			<< ", power: " << element.power << ")";
+		std::cout << " (term: " << element.term << ", power: " << element.power << ")";
+		
 	std::cout << std::endl;
 }
 
@@ -40,22 +38,28 @@ int main(int argc, char **argv)
 	if (equation_string == "")
 		return 1;
 		
-		std::cout << "Equation: " << equation_string << std::endl;
+	std::cout << "Equation: " << equation_string << std::endl;
 		
-		try {
-			Equation equation(equation_string);
+	try {
+		Equation equation(equation_string);
 
-			calculate_terms(equation);
+		calculate_terms(equation);
 
-			print_terms("Left terms", equation.left_terms);
-			print_terms("Right terms", equation.right_terms);
+		print_terms("Left terms", equation.left_terms);
+		print_terms("Right terms", equation.right_terms);
+
+		reduce_equation(equation.right_terms, equation.left_terms);
+
+		create_reduce_string(equation);
+		std::cout << "Reduced: " << equation.equation_reduced << std::endl;
+		
+		print_terms("Left terms", equation.left_terms);
+		print_terms("Right terms", equation.right_terms);
+
 
 	} catch (const std::exception &e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
-
-
-
 	
 	return 0;
 }

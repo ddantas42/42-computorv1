@@ -24,11 +24,12 @@ class Equation
 		std::vector<t_element> left_terms;
 		std::vector<t_element> right_terms;
 		std::string equation;
-
-	private:
 		std::string equation_reduced;
+		
 };
 
-void calculate_terms(Equation &Eq);
+void	calculate_terms(Equation &Eq);
+void	reduce_equation(std::vector<t_element> &right_terms, std::vector<t_element> &left_terms);
+void	create_reduce_string(Equation &Eq);
 
 #endif

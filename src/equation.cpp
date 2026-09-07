@@ -11,7 +11,7 @@ Equation::Equation(const std::string &equation) : equation(equation)
 
 Equation::Equation(const Equation &other)
 {
-	this->equation.assign(equation);
+	this->equation.assign(other.equation);
 }
 
 Equation::~Equation()

@@ -67,6 +67,7 @@ void calculate_terms(Equation &Eq)
 {
 	std::vector<t_element> *current_terms = &(Eq.left_terms);
 	t_element element = {0, 0};
+	int found_equal = 0;
 
 	for (auto it = Eq.equation.begin(); it != Eq.equation.end(); )
 	{
@@ -75,6 +76,9 @@ void calculate_terms(Equation &Eq)
 
 		if (*it == '=')
 		{
+			if (found_equal == 1)
+				throw std::invalid_argument("More than one equal sign");
+			found_equal = 1;
 			current_terms = &(Eq.right_terms);
 			it++;
 			continue;

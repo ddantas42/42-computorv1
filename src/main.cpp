@@ -28,8 +28,7 @@ static void print_terms(const std::string &name,
 	}
 
 	for (const t_element &element : terms)
-		std::cout << " (term: " << element.term
-			<< ", power: " << element.power << ")";
+		std::cout << " (term: " << element.term << ", power: " << element.power << ")";
 	std::cout << std::endl;
 }
 

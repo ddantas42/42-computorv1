@@ -11,6 +11,10 @@ void create_reduce_string(Equation &Eq)
 		std::ostringstream term, power;
 		term << (*it).term;
 		power << (*it).power;
+		if ((*it).term >= 0 && it != Eq.left_terms.begin())
+			Eq.equation_reduced += "+ ";
+		if ((*it).term < 0)
+			Eq.equation_reduced += "- ";
 		Eq.equation_reduced += term.str() + " * X^" + power.str() + " ";
 
 	}

@@ -18,9 +18,6 @@ static void solve_degree_2(Equation &Eq)
 	double c = Eq.left_terms[2].term;
 	double delta = b * b - 4 * a * c;
 
-	Eq.solution_x1 = (-b + std::sqrt(std::abs(delta))) / (2 * a);
-	Eq.solution_x2 = (-b - std::sqrt(std::abs(delta))) / (2 * a);
-
 	if (delta < 0)
 	{
 
@@ -38,6 +35,9 @@ static void solve_degree_2(Equation &Eq)
 		std::cout << "Discriminant is zero, the solution is:" << std::endl;
 	else
 		std::cout << "Discriminant is strictly positive, the two solutions are:" << std::endl;
+
+	Eq.solution_x1 = (-b + std::sqrt(std::abs(delta))) / (2 * a);
+	Eq.solution_x2 = (-b - std::sqrt(std::abs(delta))) / (2 * a);
 
 	std::cout << Eq.solution_x1.real() << std::endl;
 	std::cout << Eq.solution_x2.real() << std::endl;

@@ -116,4 +116,4 @@ void calculate_terms(Equation &Eq)
 	}
 }
 
-//!! $>./computor "5 * X^0 + 4 * X^1 = 4 * X^0"
+

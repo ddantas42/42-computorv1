@@ -1,0 +1,234 @@
+========================================
+./computor "2 * X^2 + 2 * X^1 + 5 * X^0 = 0 * X^0"
+========================================
+Reduced: 2 * X^2 + 2 * X^1 + 5 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-0.5 + 1.5i
+-0.5 -1.5i
+
+========================================
+./computor "5 * X^2 + 3 * X^1 + 7 * X^0 = 2 * X^0"
+========================================
+Reduced: 5 * X^2 + 3 * X^1 + 5 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-0.3 + 0.953939i
+-0.3 -0.953939i
+
+========================================
+./computor "4 * X^2 + 8 * X^1 + 4 * X^0 = 2 * X^1 + 2 * X^0"
+========================================
+Reduced: 4 * X^2 + 6 * X^1 + 2 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+-0.5
+-1
+
+========================================
+./computor "3 * X^2 + 7 * X^1 + 9 * X^0 = 4 * X^1 + 1 * X^0"
+========================================
+Reduced: 3 * X^2 + 3 * X^1 + 8 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-0.5 + 1.55456i
+-0.5 -1.55456i
+
+========================================
+./computor "6 * X^2 + 2 * X^1 + 8 * X^0 = 3 * X^2 + 5 * X^1 + 2 * X^0"
+========================================
+Reduced: 3 * X^2 -3 * X^1 + 6 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+0.5 + 1.32288i
+0.5 -1.32288i
+
+========================================
+./computor "10 * X^2 + 5 * X^1 + 2 * X^0 = 4 * X^2 + 1 * X^1 + 6 * X^0"
+========================================
+Reduced: 6 * X^2 + 4 * X^1 -4 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+0.548584
+-1.21525
+
+========================================
+./computor "7 * X^2 + 4 * X^1 + 3 * X^0 = 2 * X^2 + 9 * X^1 + 8 * X^0"
+========================================
+Reduced: 5 * X^2 -5 * X^1 -5 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+1.61803
+-0.618034
+
+========================================
+./computor "8 * X^2 + 6 * X^1 + 5 * X^0 = 3 * X^1 + 1 * X^0"
+========================================
+Reduced: 8 * X^2 + 3 * X^1 + 4 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-0.1875 + 0.681795i
+-0.1875 -0.681795i
+
+========================================
+./computor "9 * X^2 + 2 * X^1 + 10 * X^0 = 4 * X^2 + 7 * X^1 + 2 * X^0"
+========================================
+Reduced: 5 * X^2 -5 * X^1 + 8 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+0.5 + 1.1619i
+0.5 -1.1619i
+
+========================================
+./computor "12 * X^2 + 8 * X^1 + 4 * X^0 = 6 * X^2 + 4 * X^1 + 2 * X^0"
+========================================
+Reduced: 6 * X^2 + 4 * X^1 + 2 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-0.333333 + 0.471405i
+-0.333333 -0.471405i
+
+========================================
+./computor "1 * X^2 + 2 * X^1 + 1 * X^0 = 5 * X^0"
+========================================
+Reduced: 1 * X^2 + 2 * X^1 -4 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+1.23607
+-3.23607
+
+========================================
+./computor "1 * X^2 - 4 * X^1 + 4 * X^0 = 2 * X^0"
+========================================
+Reduced: 1 * X^2 -4 * X^1 + 2 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+3.41421
+0.585786
+
+========================================
+./computor "2 * X^2 + 4 * X^1 + 6 * X^0 = 1 * X^2 + 2 * X^1 + 3 * X^0"
+========================================
+Reduced: 1 * X^2 + 2 * X^1 + 3 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-1 + 1.41421i
+-1 -1.41421i
+
+========================================
+./computor "5 * X^2 + 10 * X^1 + 5 * X^0 = 2 * X^2 + 4 * X^1 + 2 * X^0"
+========================================
+Reduced: 3 * X^2 + 6 * X^1 + 3 * X^0 = 0
+Polynomial degree: 2
+Discriminant is zero, the solution is:
+-1
+-1
+
+========================================
+./computor "3 * X^2 + 6 * X^1 + 8 * X^0 = 1 * X^2 + 2 * X^1 + 5 * X^0"
+========================================
+Reduced: 2 * X^2 + 4 * X^1 + 3 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-1 + 0.707107i
+-1 -0.707107i
+
+========================================
+./computor "2 * X^3 + 5 * X^2 + 3 * X^1 + 7 * X^0 = 1 * X^3 + 2 * X^2 + 4 * X^1 + 2 * X^0"
+========================================
+Reduced: 1 * X^3 + 3 * X^2 -1 * X^1 + 5 * X^0 = 0
+The polynomial degree is stricly greater than 2, I can't solve.
+
+========================================
+./computor "4 * X^4 + 2 * X^3 + 7 * X^2 + 5 * X^1 + 1 * X^0 = 2 * X^4 + 3 * X^3 + 2 * X^2 + 1 * X^0"
+========================================
+Reduced: 2 * X^4 -1 * X^3 + 5 * X^2 + 5 * X^1 + 0 * X^0 = 0
+The polynomial degree is stricly greater than 2, I can't solve.
+
+========================================
+./computor "6 * X^2 + 3 * X^3 + 8 * X^1 + 4 * X^0 = 2 * X^3 + 1 * X^2 + 5 * X^1 + 7 * X^0"
+========================================
+Reduced: 1 * X^3 + 5 * X^2 + 3 * X^1 -3 * X^0 = 0
+The polynomial degree is stricly greater than 2, I can't solve.
+
+========================================
+./computor "10 * X^2 + 4 * X^0 + 3 * X^1 = 5 * X^1 + 9 * X^0"
+========================================
+Reduced: 10 * X^2 -2 * X^1 -5 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+0.814143
+-0.614143
+
+========================================
+./computor "7 * X^2 + 2 * X^0 + 4 * X^1 = 3 * X^2 + 8 * X^0 + 1 * X^1"
+========================================
+Reduced: 4 * X^2 + 3 * X^1 -6 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+0.905869
+-1.65587
+
+========================================
+./computor "100 * X^2 + 20 * X^1 + 1 * X^0 = 50 * X^1 + 10 * X^0"
+========================================
+Reduced: 100 * X^2 -30 * X^1 -9 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+0.48541
+-0.18541
+
+========================================
+./computor "50 * X^2 + 100 * X^1 + 25 * X^0 = 10 * X^2 + 20 * X^1 + 5 * X^0"
+========================================
+Reduced: 40 * X^2 + 80 * X^1 + 20 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+-0.292893
+-1.70711
+
+========================================
+./computor "1000 * X^2 + 1 * X^1 + 100 * X^0 = 500 * X^2 + 2 * X^1 + 50 * X^0"
+========================================
+Reduced: 500 * X^2 -1 * X^1 + 50 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+0.001 + 0.316226i
+0.001 -0.316226i
+
+========================================
+./computor "1 * X^2 + 1 * X^1 + 1 * X^0 = 2 * X^1 + 3 * X^0"
+========================================
+Reduced: 1 * X^2 -1 * X^1 -2 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly positive, the two solutions are:
+2
+-1
+
+========================================
+./computor "2 * X^2 + 3 * X^1 + 4 * X^0 = 1 * X^1 + 2 * X^0"
+========================================
+Reduced: 2 * X^2 + 2 * X^1 + 2 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+-0.5 + 0.866025i
+-0.5 -0.866025i
+
+========================================
+./computor "5 * X^2 - 2 * X^1 + 9 * X^0 = 3 * X^1 - 1 * X^0"
+========================================
+Reduced: 5 * X^2 -5 * X^1 + 10 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+0.5 + 1.32288i
+0.5 -1.32288i
+
+========================================
+./computor "8 * X^2 - 4 * X^1 + 2 * X^0 = 2 * X^2 + 6 * X^1 - 4 * X^0"
+========================================
+Reduced: 6 * X^2 -10 * X^1 + 6 * X^0 = 0
+Polynomial degree: 2
+Discriminant is strictly negative, the two complex solutions are:
+0.833333 + 0.552771i
+0.833333 -0.552771i
+

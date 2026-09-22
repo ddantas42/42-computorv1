@@ -65,3 +65,5 @@ int main(int argc, char **argv)
 	
 	return 0;
 }
+
+//!! $>./computor "5 * X^0 + 4 * X^1 = 4 * X^0"

@@ -5,7 +5,7 @@ RM = rm -f
 
 SRCDIR = ./src/
 
-FILES = main.cpp equation.cpp calculate_terms.cpp reduce.cpp create_reduce_string.cpp
+FILES = main.cpp equation.cpp calculate_terms.cpp reduce.cpp create_reduce_string.cpp solve.cpp
 
 SRC = $(addprefix $(SRCDIR), $(FILES))
 OBJS = $(SRC:.cpp=.o)

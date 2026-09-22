@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 		print_terms("Left terms", equation.left_terms);
 		print_terms("Right terms", equation.right_terms);
 
-		reduce_equation(equation.right_terms, equation.left_terms);
+		reduce_equation(equation);
 
 		create_reduce_string(equation);
 		std::cout << "Reduced: " << equation.equation_reduced << std::endl;
@@ -55,6 +55,9 @@ int main(int argc, char **argv)
 		print_terms("Left terms", equation.left_terms);
 		print_terms("Right terms", equation.right_terms);
 
+		// Full Equation already processed and reduced, starting solving.
+
+		solve(equation);
 
 	} catch (const std::exception &e) {
 		std::cerr << "Error: " << e.what() << std::endl;

@@ -22,7 +22,7 @@ static double string_to_first_number(std::string::iterator &it, std::string stri
 		aux_for_number += *it;
 	}
 
-	std::cout << aux_for_number << std::endl;
+	// std::cout << aux_for_number << std::endl;
 	return std::stod(aux_for_number);
 }
 
@@ -103,10 +103,10 @@ void calculate_terms(Equation &Eq)
 
 			// Getting the Term A first after the sign
 			element.term = get_element_term(it, Eq.equation);
-			
+
 			// After getting the Term, we skip towards a B, checking between so check for invalid characters
 			checks_between_A_and_B(it, element.term);
-			
+
 			element.power = string_to_first_number(it, Eq.equation, false);
 
 			current_terms->push_back(element);

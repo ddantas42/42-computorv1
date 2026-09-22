@@ -18,35 +18,35 @@ int calculate_max_polinomial(std::vector<t_element> &right_terms, std::vector<t_
 
 
 
-void reduce_equation(std::vector<t_element> &right_terms, std::vector<t_element> &left_terms)
+void reduce_equation(Equation &Eq)
 {
 	double  sum = 0;
-	int     max_polinomio = calculate_max_polinomial(right_terms, left_terms);
-	int		polinomio = max_polinomio;
 	std::vector<t_element> 	new_vector;
 	t_element	new_element = {0,0};
+	Eq.max_power = calculate_max_polinomial(Eq.right_terms, Eq.left_terms);
+	int		polinomio = Eq.max_power;
 
 	while (polinomio >= 0)
 	{
-		std::cout << "polinomio: " << polinomio << std::endl;
+		// std::cout << "polinomio: " << polinomio << std::endl;
 		new_element = {0 , polinomio};
 		sum = 0;
 
-		for (auto it = left_terms.begin() ; it != left_terms.end(); it++)
+		for (auto it = Eq.left_terms.begin() ; it != Eq.left_terms.end(); it++)
 		{
 			if ((*it).power == polinomio)
 			{
 				sum += (*it).term;
-				std::cout << "sum: " << sum << " | After adding " << (*it).term << std::endl;
+				// std::cout << "sum: " << sum << " | After adding " << (*it).term << std::endl;
 			}
 
 		}
-		for (auto it = right_terms.begin() ; it != right_terms.end(); it++)
+		for (auto it = Eq.right_terms.begin() ; it != Eq.right_terms.end(); it++)
 		{
 			if ((*it).power == polinomio)
 			{
 				sum -= (*it).term;
-				std::cout << "sum: " << sum << " | After subtracting " << (*it).term << std::endl;
+				// std::cout << "sum: " << sum << " | After subtracting " << (*it).term << std::endl;
 			}
 		}
 		new_element.term = sum;
@@ -55,8 +55,8 @@ void reduce_equation(std::vector<t_element> &right_terms, std::vector<t_element>
 		polinomio--;
 	}
 
-	left_terms.clear();
-	left_terms = new_vector;
-	right_terms.clear();
+	Eq.left_terms.clear();
+	Eq.left_terms = new_vector;
+	Eq.right_terms.clear();
 
 }

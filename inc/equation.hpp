@@ -25,11 +25,14 @@ class Equation
 		std::vector<t_element> right_terms;
 		std::string equation;
 		std::string equation_reduced;
+
+		int max_power;
 		
 };
 
 void	calculate_terms(Equation &Eq);
-void	reduce_equation(std::vector<t_element> &right_terms, std::vector<t_element> &left_terms);
+void	reduce_equation(Equation &Eq);
 void	create_reduce_string(Equation &Eq);
+void	solve(Equation &Eq);
 
 #endif

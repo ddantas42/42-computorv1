@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <complex>
 
 typedef struct s_element
 {
@@ -10,6 +11,14 @@ typedef struct s_element
 	int power;
 	
 } t_element;
+
+typedef struct s_solution
+{
+	std::complex<double> normal;
+	double imaginary;
+	
+} t_solution;
+
 
 class Equation
 {
@@ -25,6 +34,9 @@ class Equation
 		std::vector<t_element> right_terms;
 		std::string equation;
 		std::string equation_reduced;
+
+		std::complex<double> solution_x1;
+		std::complex<double> solution_x2;
 
 		int max_power;
 		

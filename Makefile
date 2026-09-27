@@ -5,9 +5,11 @@ RM = rm -f
 
 SRCDIR = ./src/
 
-FILES = main.cpp equation.cpp calculate_terms.cpp reduce.cpp create_reduce_string.cpp solve.cpp
+FILES = main.cpp equation.cpp solve.cpp
+SOLVE_FILES = calculate_terms.cpp reduce.cpp create_reduce_string.cpp
+SOLVE_DIR = ./src/pre-solve/
 
-SRC = $(addprefix $(SRCDIR), $(FILES))
+SRC = $(addprefix $(SRCDIR), $(FILES)) $(addprefix $(SOLVE_DIR), $(SOLVE_FILES))
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -19,7 +21,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) -f $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)

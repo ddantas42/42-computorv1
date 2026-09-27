@@ -49,6 +49,7 @@ void reduce_equation(Equation &Eq)
 				// std::cout << "sum: " << sum << " | After subtracting " << (*it).term << std::endl;
 			}
 		}
+		
 		new_element.term = sum;
 		new_vector.push_back(new_element);
 

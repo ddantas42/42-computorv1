@@ -40,14 +40,15 @@ static void solve_degree_2(Equation &Eq)
 	Eq.solution_x2 = (-b - std::sqrt(std::abs(delta))) / (2 * a);
 
 	std::cout << Eq.solution_x1.real() << std::endl;
-	std::cout << Eq.solution_x2.real() << std::endl;
+	if (delta != 0)
+		std::cout << Eq.solution_x2.real() << std::endl;
 }
 
 void solve(Equation &Eq)
 {
 	if (Eq.max_power > 2)
 	{
-		std::cout << "The polynomial degree is stricly greater than 2, I can't solve." << std::endl;
+		std::cout << "The polynomial degree is strictly greater than 2, I can't solve." << std::endl;
 		return ;
 	}
 	else if (Eq.max_power == 2)

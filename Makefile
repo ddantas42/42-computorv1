@@ -5,11 +5,18 @@ RM = rm -f
 
 SRCDIR = ./src/
 
-FILES = main.cpp equation.cpp solve.cpp
-SOLVE_FILES = calculate_terms.cpp reduce.cpp create_reduce_string.cpp
-SOLVE_DIR = ./src/pre-solve/
+MAIN_FILES = main.cpp equation.cpp
 
-SRC = $(addprefix $(SRCDIR), $(FILES)) $(addprefix $(SOLVE_DIR), $(SOLVE_FILES))
+PRE_SOLVE_FILES = calculate_terms.cpp reduce.cpp create_reduce_string.cpp
+PRE_SOLVE_DIR = ./src/pre-solve/
+
+SOLVER_FILES = solve.cpp solve_degree_2.cpp
+SOLVER_DIR = ./src/solver/
+
+SRC =   $(addprefix $(SRCDIR), $(MAIN_FILES)) \
+		$(addprefix $(SOLVER_DIR), $(SOLVER_FILES)) \
+		$(addprefix $(PRE_SOLVE_DIR), $(PRE_SOLVE_FILES))
+		
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)

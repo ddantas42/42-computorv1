@@ -46,5 +46,6 @@ void	calculate_terms(Equation &Eq);
 void	reduce_equation(Equation &Eq);
 void	create_reduce_string(Equation &Eq);
 void	solve(Equation &Eq);
+void	solve_degree_2(Equation &Eq);
 
 #endif

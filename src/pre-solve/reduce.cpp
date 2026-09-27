@@ -6,11 +6,11 @@ int calculate_max_polinomial(std::vector<t_element> &right_terms, std::vector<t_
 	int max_polinomio = 0;
 
 	for (auto it = left_terms.begin() ; it != left_terms.end(); it++)
-		if ((*it).power > max_polinomio)
+		if ((*it).power > max_polinomio && (*it).term != 0)
 			max_polinomio = (*it).power;
 
 	for (auto it = right_terms.begin() ; it != right_terms.end(); it++)
-		if ((*it).power > max_polinomio)
+		if ((*it).power > max_polinomio && (*it).term != 0)
 			max_polinomio = (*it).power;
 	
 	return max_polinomio;
@@ -50,8 +50,12 @@ void reduce_equation(Equation &Eq)
 			}
 		}
 		
-		new_element.term = sum;
-		new_vector.push_back(new_element);
+		// Don't put Zero terms
+		if (sum != 0)
+		{
+			new_element.term = sum;
+			new_vector.push_back(new_element);
+		}
 
 		polinomio--;
 	}
@@ -59,5 +63,7 @@ void reduce_equation(Equation &Eq)
 	Eq.left_terms.clear();
 	Eq.left_terms = new_vector;
 	Eq.right_terms.clear();
+
+	Eq.max_power = calculate_max_polinomial(Eq.left_terms, Eq.right_terms);
 
 }

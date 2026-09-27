@@ -16,6 +16,7 @@ static std::string get_equation_from_arg(int argc, char **argv)
 	return equation;
 }
 
+/*
 static void print_terms(const std::string &name, const std::vector<t_element> &terms)
 {
 	std::cout << name << ":";
@@ -24,11 +25,12 @@ static void print_terms(const std::string &name, const std::vector<t_element> &t
 		std::cout << " (none)" << std::endl;
 		return;
 	}
-
+	
 	for (const t_element &element : terms)
-		std::cout << " (term: " << element.term << ", power: " << element.power << ")";
+	std::cout << " (term: " << element.term << ", power: " << element.power << ")";
 	std::cout << std::endl;
 }
+*/
 
 int main(int argc, char **argv)
 {
@@ -42,16 +44,16 @@ int main(int argc, char **argv)
 
 		calculate_terms(equation);
 
-		print_terms("Left terms", equation.left_terms);
-		print_terms("Right terms", equation.right_terms);
+		// print_terms("Left terms", equation.left_terms);
+		// print_terms("Right terms", equation.right_terms);
 
 		reduce_equation(equation);
 
 		create_reduce_string(equation);
 		std::cout << "Reduced: " << equation.equation_reduced << std::endl;
 		
-		print_terms("Left terms", equation.left_terms);
-		print_terms("Right terms", equation.right_terms);
+		// print_terms("Left terms", equation.left_terms);
+		// print_terms("Right terms", equation.right_terms);
 
 		// Full Equation already processed and reduced, starting solving.
 

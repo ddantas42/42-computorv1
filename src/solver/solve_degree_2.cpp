@@ -15,10 +15,10 @@ static void print_complex(std::complex<double> &num)
 
 	std::cout << real << " ";
 
-    if (num.imag() >= 0)
-        std::cout << "+ " << num.imag() << "i\n";
-    else
-        std::cout << "- " << -num.imag() << "i\n";
+	if (num.imag() >= 0)
+		std::cout << "+ " << num.imag() << "i\n";
+	else
+		std::cout << "- " << -num.imag() << "i\n";
 }
 
 static double find_term_in_equation_by_power(std::vector<t_element> vector, int power)
@@ -28,7 +28,6 @@ static double find_term_in_equation_by_power(std::vector<t_element> vector, int 
 		if (power == (*it).power)
 			return (*it).term;
 	}
-
 	return 0;
 }
 
@@ -39,7 +38,7 @@ void solve_degree_2(Equation &Eq)
 	double c = 0;
 	double delta = 0;
 
-	a = find_term_in_equation_by_power(Eq.left_terms, 2);
+	a = find_term_in_equation_by_power(Eq.left_terms, 2);  // will ALWAYS exists due the max_power being checked before this function triggers
 	b = find_term_in_equation_by_power(Eq.left_terms, 1);
 	c = find_term_in_equation_by_power(Eq.left_terms, 0);
 

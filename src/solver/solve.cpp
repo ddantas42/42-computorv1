@@ -18,7 +18,7 @@ void solve(Equation &Eq)
 	else if (Eq.max_power == 1)
 	{
 		std::cout << "Polynomial degree: 1" << std::endl;
-		// solve_degree_1(Eq);
+		solve_degree_1(Eq);
 	}
 	else if (Eq.max_power == 0)
 	{

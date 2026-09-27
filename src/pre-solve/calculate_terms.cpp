@@ -15,7 +15,7 @@ static double string_to_first_number(std::string::iterator &it, std::string stri
 			if (has_dot == true)
 				throw std::invalid_argument("2 dots places in one number");
 			if (allow_doubles == false)
-				throw std::invalid_argument("Double now allowed on Power");
+				throw std::invalid_argument("Double ntw allowed on Power");
 
 			has_dot = true;
 		}

@@ -1,523 +1,318 @@
 ========================================
-./computor "8 * X^0 - 6 * X^1 + 0 * X^2 - 5.6 * X^3 = 3 * X^0"
+./computor "6 * X^3 + 11 * X^2 + 8 * X^1 + 4 * X^0 = 6 * X^3 + 11 * X^2 + 3 * X^1 - 6 * X^0"
 ========================================
-Left terms: (term: 8, power: 0) (term: -6, power: 1) (term: 0, power: 2) (term: -5.6, power: 3)
-Right terms: (term: 3, power: 0)
-Reduced: -5.6 * X^3 -6 * X^1 + 5 * X^0 = 0
-Left terms: (term: -5.6, power: 3) (term: -6, power: 1) (term: 5, power: 0)
-Right terms: (none)
-The polynomial degree is strictly greater than 2, I can't solve.
-
-========================================
-./computor "0 * X^3 + 4 * X^2 + 0 * X^1 + 8 * X^0 = 2 * X^2"
-========================================
-Left terms: (term: 0, power: 3) (term: 4, power: 2) (term: 0, power: 1) (term: 8, power: 0)
-Right terms: (term: 2, power: 2)
-Reduced: 2 * X^2 + 8 * X^0 = 0
-Left terms: (term: 2, power: 2) (term: 8, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 2 | b: 0 | c: 8
-Discriminant is strictly negative, the two complex solutions are:
-0 + 2i
-0 - 2i
-
-========================================
-./computor "5 * X^2 + 0 * X^1 + 5 * X^0 = 0 * X^2 + 0 * X^1 + 0 * X^0"
-========================================
-Left terms: (term: 5, power: 2) (term: 0, power: 1) (term: 5, power: 0)
-Right terms: (term: 0, power: 2) (term: 0, power: 1) (term: 0, power: 0)
-Reduced: 5 * X^2 + 5 * X^0 = 0
-Left terms: (term: 5, power: 2) (term: 5, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 5 | b: 0 | c: 5
-Discriminant is strictly negative, the two complex solutions are:
-0 + 1i
-0 - 1i
-
-========================================
-./computor "0 * X^2 + 7 * X^1 + 3 * X^0 = 0 * X^1 + 3 * X^0"
-========================================
-Left terms: (term: 0, power: 2) (term: 7, power: 1) (term: 3, power: 0)
-Right terms: (term: 0, power: 1) (term: 3, power: 0)
-Reduced: 7 * X^1 = 0
-Left terms: (term: 7, power: 1)
-Right terms: (none)
+Reduced: 5 * X^1 + 10 * X^0 = 0
 Polynomial degree: 1
+a: 5 | b: 10
+- 2
 
 ========================================
-./computor "9 * X^2 + 0 * X^1 + 0 * X^0 = 4 * X^2 + 0 * X^1 + 0 * X^0"
+./computor "9 * X^4 - 5 * X^3 + 7 * X^2 - 4 * X^1 + 8 * X^0 = 9 * X^4 - 5 * X^3 + 7 * X^2 + 5 * X^1 - 4 * X^0"
 ========================================
-Left terms: (term: 9, power: 2) (term: 0, power: 1) (term: 0, power: 0)
-Right terms: (term: 4, power: 2) (term: 0, power: 1) (term: 0, power: 0)
-Reduced: + 5 * X^2 = 0
-Left terms: (term: 5, power: 2)
-Right terms: (none)
-Polynomial degree: 2
-a: 5 | b: 0 | c: 0
-Discriminant is zero, the solution is:
-0
-
-========================================
-./computor "5 * X^2 + 7 * X^1 + 3 * X^0 = 2 * X^2 + 7 * X^1 + 1 * X^0"
-========================================
-Left terms: (term: 5, power: 2) (term: 7, power: 1) (term: 3, power: 0)
-Right terms: (term: 2, power: 2) (term: 7, power: 1) (term: 1, power: 0)
-Reduced: + 3 * X^2 + 2 * X^0 = 0
-Left terms: (term: 3, power: 2) (term: 2, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 3 | b: 0 | c: 2
-Discriminant is strictly negative, the two complex solutions are:
-0 + 0.816497i
-0 - 0.816497i
-
-========================================
-./computor "8 * X^2 - 4 * X^1 + 6 * X^0 = 3 * X^2 - 4 * X^1 + 2 * X^0"
-========================================
-Left terms: (term: 8, power: 2) (term: -4, power: 1) (term: 6, power: 0)
-Right terms: (term: 3, power: 2) (term: -4, power: 1) (term: 2, power: 0)
-Reduced: 5 * X^2 + 4 * X^0 = 0
-Left terms: (term: 5, power: 2) (term: 4, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 5 | b: 0 | c: 4
-Discriminant is strictly negative, the two complex solutions are:
-0 + 0.894427i
-0 - 0.894427i
-
-========================================
-./computor "10 * X^2 + 12 * X^1 + 5 * X^0 = 10 * X^2 + 12 * X^1 + 9 * X^0"
-========================================
-Left terms: (term: 10, power: 2) (term: 12, power: 1) (term: 5, power: 0)
-Right terms: (term: 10, power: 2) (term: 12, power: 1) (term: 9, power: 0)
-Reduced: -4 * X^0 = 0
-Left terms: (term: -4, power: 0)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "3 * X^3 + 5 * X^2 - 9 * X^1 + 4 * X^0 = 1 * X^3 + 2 * X^2 - 9 * X^1 + 8 * X^0"
-========================================
-Left terms: (term: 3, power: 3) (term: 5, power: 2) (term: -9, power: 1) (term: 4, power: 0)
-Right terms: (term: 1, power: 3) (term: 2, power: 2) (term: -9, power: 1) (term: 8, power: 0)
-Reduced: 2 * X^3 + 3 * X^2 -4 * X^0 = 0
-Left terms: (term: 2, power: 3) (term: 3, power: 2) (term: -4, power: 0)
-Right terms: (none)
-The polynomial degree is strictly greater than 2, I can't solve.
-
-========================================
-./computor "5 * X^2 + 4 * X^1 + 3 * X^0 = 5 * X^2 + 2 * X^1 + 1 * X^0"
-========================================
-Left terms: (term: 5, power: 2) (term: 4, power: 1) (term: 3, power: 0)
-Right terms: (term: 5, power: 2) (term: 2, power: 1) (term: 1, power: 0)
-Reduced: 2 * X^1 + 2 * X^0 = 0
-Left terms: (term: 2, power: 1) (term: 2, power: 0)
-Right terms: (none)
+Reduced: -9 * X^1 + 12 * X^0 = 0
 Polynomial degree: 1
+a: -9 | b: 12
+1.33333
 
 ========================================
-./computor "8 * X^2 - 6 * X^1 + 2 * X^0 = 8 * X^2 + 4 * X^1 + 10 * X^0"
+./computor "3 * X^5 + 8 * X^4 - 6 * X^2 + 9 * X^1 + 2 * X^0 = 3 * X^5 + 8 * X^4 - 6 * X^2 - 3 * X^1 + 10 * X^0"
 ========================================
-Left terms: (term: 8, power: 2) (term: -6, power: 1) (term: 2, power: 0)
-Right terms: (term: 8, power: 2) (term: 4, power: 1) (term: 10, power: 0)
-Reduced: -10 * X^1 -8 * X^0 = 0
-Left terms: (term: -10, power: 1) (term: -8, power: 0)
-Right terms: (none)
+Reduced: 12 * X^1 -8 * X^0 = 0
 Polynomial degree: 1
+a: 12 | b: -8
+0.666667
 
 ========================================
-./computor "12 * X^2 + 5 * X^1 + 7 * X^0 = 12 * X^2 + 5 * X^1 + 7 * X^0"
+./computor "4 * X^6 + 7 * X^5 - 3 * X^4 + 9 * X^2 + 11 * X^1 - 5 * X^0 = 4 * X^6 + 7 * X^5 - 3 * X^4 + 9 * X^2 + 2 * X^1 + 6 * X^0"
 ========================================
-Left terms: (term: 12, power: 2) (term: 5, power: 1) (term: 7, power: 0)
-Right terms: (term: 12, power: 2) (term: 5, power: 1) (term: 7, power: 0)
-Reduced: 0= 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
+Reduced: 9 * X^1 -11 * X^0 = 0
+Polynomial degree: 1
+a: 9 | b: -11
+1.22222
 
 ========================================
-./computor "4 * X^2 + 3 * X^1 + 8 * X^0 = 2 * X^2 + 1 * X^1 + 8 * X^0"
+./computor "8 * X^7 - 4 * X^6 + 3 * X^5 + 6 * X^3 - 7 * X^1 + 2 * X^0 = 8 * X^7 - 4 * X^6 + 3 * X^5 + 6 * X^3 + 5 * X^1 - 8 * X^0"
 ========================================
-Left terms: (term: 4, power: 2) (term: 3, power: 1) (term: 8, power: 0)
-Right terms: (term: 2, power: 2) (term: 1, power: 1) (term: 8, power: 0)
-Reduced: 2 * X^2 + 2 * X^1 = 0
-Left terms: (term: 2, power: 2) (term: 2, power: 1)
-Right terms: (none)
-Polynomial degree: 2
-a: 2 | b: 2 | c: 0
-Discriminant is strictly positive, the two solutions are:
-0
--1
+Reduced: -12 * X^1 + 10 * X^0 = 0
+Polynomial degree: 1
+a: -12 | b: 10
+0.833333
 
 ========================================
-./computor "7 * X^2 - 5 * X^1 - 3 * X^0 = 3 * X^2 - 2 * X^1 - 3 * X^0"
+./computor "2 * X^8 + 5 * X^6 - 9 * X^4 + 3 * X^2 + 14 * X^1 - 7 * X^0 = 2 * X^8 + 5 * X^6 - 9 * X^4 + 3 * X^2 + 6 * X^1 + 1 * X^0"
 ========================================
-Left terms: (term: 7, power: 2) (term: -5, power: 1) (term: -3, power: 0)
-Right terms: (term: 3, power: 2) (term: -2, power: 1) (term: -3, power: 0)
-Reduced: 4 * X^2 -3 * X^1 = 0
-Left terms: (term: 4, power: 2) (term: -3, power: 1)
-Right terms: (none)
-Polynomial degree: 2
-a: 4 | b: -3 | c: 0
-Discriminant is strictly positive, the two solutions are:
-0.75
-0
+Reduced: 8 * X^1 -8 * X^0 = 0
+Polynomial degree: 1
+a: 8 | b: -8
+1
 
 ========================================
-./computor "5 * X^2 + 7 * X^1 + 9 * X^0 = 5 * X^2 + 7 * X^1 + 4 * X^0"
+./computor "5 * X^4 + 8 * X^3 + 2 * X^2 + 7 * X^1 + 9 * X^0 = 5 * X^4 + 8 * X^3 + 2 * X^2 + 3 * X^1 + 1 * X^0"
 ========================================
-Left terms: (term: 5, power: 2) (term: 7, power: 1) (term: 9, power: 0)
-Right terms: (term: 5, power: 2) (term: 7, power: 1) (term: 4, power: 0)
+Reduced: 4 * X^1 + 8 * X^0 = 0
+Polynomial degree: 1
+a: 4 | b: 8
+- 2
+
+========================================
+./computor "9 * X^6 - 4 * X^5 + 7 * X^3 + 12 * X^1 - 8 * X^0 = 9 * X^6 - 4 * X^5 + 7 * X^3 + 5 * X^1 + 6 * X^0"
+========================================
+Reduced: 7 * X^1 -14 * X^0 = 0
+Polynomial degree: 1
+a: 7 | b: -14
+2
+
+========================================
+./computor "7 * X^3 - 2 * X^2 + 4 * X^1 - 11 * X^0 = 7 * X^3 - 2 * X^2 - 6 * X^1 + 1 * X^0"
+========================================
+Reduced: 10 * X^1 -12 * X^0 = 0
+Polynomial degree: 1
+a: 10 | b: -12
+1.2
+
+========================================
+./computor "8 * X^6 + 5 * X^2 + 9 * X^0 = 8 * X^6 + 5 * X^2 + 4 * X^0"
+========================================
 Reduced: 5 * X^0 = 0
-Left terms: (term: 5, power: 0)
-Right terms: (none)
 Polynomial degree: 0
 
 ========================================
-./computor "8 * X^2 + 6 * X^1 + 3 * X^0 = 8 * X^2 + 2 * X^1 + 3 * X^0"
+./computor "3 * X^8 - 7 * X^5 + 12 * X^1 = 3 * X^8 - 7 * X^5 + 4 * X^1"
 ========================================
-Left terms: (term: 8, power: 2) (term: 6, power: 1) (term: 3, power: 0)
-Right terms: (term: 8, power: 2) (term: 2, power: 1) (term: 3, power: 0)
-Reduced: + 4 * X^1 = 0
-Left terms: (term: 4, power: 1)
-Right terms: (none)
+Reduced: 8 * X^1 = 0
 Polynomial degree: 1
-
-========================================
-./computor "4 * X^3 + 9 * X^2 + 5 * X^1 + 7 * X^0 = 4 * X^3 + 9 * X^2 + 5 * X^1 + 7 * X^0"
-========================================
-Left terms: (term: 4, power: 3) (term: 9, power: 2) (term: 5, power: 1) (term: 7, power: 0)
-Right terms: (term: 4, power: 3) (term: 9, power: 2) (term: 5, power: 1) (term: 7, power: 0)
-Reduced: 0= 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "5 * X^3 + 4 * X^2 + 3 * X^1 + 2 * X^0 = 5 * X^3 + 1 * X^2 + 3 * X^1 + 2 * X^0"
-========================================
-Left terms: (term: 5, power: 3) (term: 4, power: 2) (term: 3, power: 1) (term: 2, power: 0)
-Right terms: (term: 5, power: 3) (term: 1, power: 2) (term: 3, power: 1) (term: 2, power: 0)
-Reduced: + 3 * X^2 = 0
-Left terms: (term: 3, power: 2)
-Right terms: (none)
-Polynomial degree: 2
-a: 3 | b: 0 | c: 0
-Discriminant is zero, the solution is:
+a: 8 | b: 0
 0
 
 ========================================
-./computor "7 * X^4 + 2 * X^3 + 6 * X^2 + 5 * X^1 + 1 * X^0 = 7 * X^4 + 2 * X^3 + 1 * X^2 + 5 * X^1 + 1 * X^0"
+./computor "11 * X^9 + 6 * X^4 - 8 * X^1 - 3 * X^0 = 11 * X^9 + 6 * X^4 + 7 * X^1 + 2 * X^0"
 ========================================
-Left terms: (term: 7, power: 4) (term: 2, power: 3) (term: 6, power: 2) (term: 5, power: 1) (term: 1, power: 0)
-Right terms: (term: 7, power: 4) (term: 2, power: 3) (term: 1, power: 2) (term: 5, power: 1) (term: 1, power: 0)
-Reduced: 5 * X^2 = 0
-Left terms: (term: 5, power: 2)
-Right terms: (none)
-Polynomial degree: 2
-a: 5 | b: 0 | c: 0
-Discriminant is zero, the solution is:
+Reduced: -15 * X^1 -5 * X^0 = 0
+Polynomial degree: 1
+a: -15 | b: -5
+- 0.333333
+
+========================================
+./computor "5 * X^5 + 0 * X^4 + 8 * X^3 + 0 * X^2 + 7 * X^1 + 3 * X^0 = 5 * X^5 + 0 * X^4 + 8 * X^3 + 0 * X^2 + 2 * X^1 - 7 * X^0"
+========================================
+Reduced: 5 * X^1 + 10 * X^0 = 0
+Polynomial degree: 1
+a: 5 | b: 10
+- 2
+
+========================================
+./computor "0 * X^7 + 4 * X^6 + 0 * X^5 - 3 * X^3 + 0 * X^2 + 9 * X^1 + 5 * X^0 = 0 * X^7 + 4 * X^6 + 0 * X^5 - 3 * X^3 + 0 * X^2 + 1 * X^1 - 3 * X^0"
+========================================
+Reduced: 8 * X^1 + 8 * X^0 = 0
+Polynomial degree: 1
+a: 8 | b: 8
+- 1
+
+========================================
+./computor "0 * X^8 + 0 * X^6 + 7 * X^4 + 0 * X^3 + 0 * X^2 - 6 * X^1 + 4 * X^0 = 0 * X^8 + 0 * X^6 + 7 * X^4 + 0 * X^3 + 0 * X^2 + 2 * X^1 - 8 * X^0"
+========================================
+Reduced: -8 * X^1 + 12 * X^0 = 0
+Polynomial degree: 1
+a: -8 | b: 12
+1.5
+
+========================================
+./computor "-5 * X^6 + 7 * X^4 - 3 * X^2 - 9 * X^1 + 4 * X^0 = -5 * X^6 + 7 * X^4 - 3 * X^2 - 2 * X^1 - 6 * X^0"
+========================================
+Reduced: -7 * X^1 + 10 * X^0 = 0
+Polynomial degree: 1
+a: -7 | b: 10
+1.42857
+
+========================================
+./computor "-8 * X^5 - 4 * X^3 + 6 * X^2 + 11 * X^1 - 9 * X^0 = -8 * X^5 - 4 * X^3 + 6 * X^2 + 3 * X^1 + 5 * X^0"
+========================================
+Reduced: 8 * X^1 -14 * X^0 = 0
+Polynomial degree: 1
+a: 8 | b: -14
+1.75
+
+========================================
+./computor "6 * X^7 - 9 * X^6 - 4 * X^4 - 12 * X^1 + 7 * X^0 = 6 * X^7 - 9 * X^6 - 4 * X^4 + 5 * X^1 - 8 * X^0"
+========================================
+Reduced: -17 * X^1 + 15 * X^0 = 0
+Polynomial degree: 1
+a: -17 | b: 15
+0.882353
+
+========================================
+./computor "5.5 * X^4 + 2.25 * X^3 - 7.5 * X^2 + 8.75 * X^1 + 1.5 * X^0 = 5.5 * X^4 + 2.25 * X^3 - 7.5 * X^2 + 3.25 * X^1 - 4.5 * X^0"
+========================================
+Reduced: 5.5 * X^1 + 6 * X^0 = 0
+Polynomial degree: 1
+a: 5.5 | b: 6
+- 1.09091
+
+========================================
+./computor "0.5 * X^6 - 3.75 * X^4 + 8.25 * X^2 - 6.5 * X^1 + 2.75 * X^0 = 0.5 * X^6 - 3.75 * X^4 + 8.25 * X^2 + 1.5 * X^1 - 5.25 * X^0"
+========================================
+Reduced: -8 * X^1 + 8 * X^0 = 0
+Polynomial degree: 1
+a: -8 | b: 8
+1
+
+========================================
+./computor "-2.5 * X^5 + 4.75 * X^3 + 6.125 * X^1 - 3.75 * X^0 = -2.5 * X^5 + 4.75 * X^3 - 1.875 * X^1 + 2.25 * X^0"
+========================================
+Reduced: 8 * X^1 -6 * X^0 = 0
+Polynomial degree: 1
+a: 8 | b: -6
+0.75
+
+========================================
+./computor "7 * X^6 + 5 * X^5 - 3 * X^4 + 8 * X^3 + 4 * X^2 + 9 * X^1 + 2 * X^0 = 7 * X^6 + 5 * X^5 - 3 * X^4 + 8 * X^3 + 4 * X^2 + 1 * X^1 - 6 * X^0"
+========================================
+Reduced: 8 * X^1 + 8 * X^0 = 0
+Polynomial degree: 1
+a: 8 | b: 8
+- 1
+
+========================================
+./computor "3 * X^8 - 7 * X^7 + 5 * X^6 - 2 * X^5 + 9 * X^4 + 6 * X^2 - 11 * X^1 + 4 * X^0 = 3 * X^8 - 7 * X^7 + 5 * X^6 - 2 * X^5 + 9 * X^4 + 6 * X^2 + 8 * X^1 - 9 * X^0"
+========================================
+Reduced: -19 * X^1 + 13 * X^0 = 0
+Polynomial degree: 1
+a: -19 | b: 13
+0.684211
+
+========================================
+./computor "10 * X^9 - 4 * X^8 + 7 * X^7 - 6 * X^6 + 3 * X^5 + 8 * X^3 - 5 * X^2 + 13 * X^1 - 2 * X^0 = 10 * X^9 - 4 * X^8 + 7 * X^7 - 6 * X^6 + 3 * X^5 + 8 * X^3 - 5 * X^2 + 4 * X^1 + 7 * X^0"
+========================================
+Reduced: 9 * X^1 -9 * X^0 = 0
+Polynomial degree: 1
+a: 9 | b: -9
+1
+
+========================================
+./computor "4 * X^5 + 3 * X^3 + 2 * X^1 + 8 * X^0 = 4 * X^5 + 3 * X^3 + 9 * X^1 + 1 * X^0"
+========================================
+Reduced: -7 * X^1 + 7 * X^0 = 0
+Polynomial degree: 1
+a: -7 | b: 7
+1
+
+========================================
+./computor "6 * X^7 - 2 * X^4 - 5 * X^2 - 3 * X^1 + 7 * X^0 = 6 * X^7 - 2 * X^4 - 5 * X^2 + 8 * X^1 - 4 * X^0"
+========================================
+Reduced: -11 * X^1 + 11 * X^0 = 0
+Polynomial degree: 1
+a: -11 | b: 11
+1
+
+========================================
+./computor "9 * X^4 + 2 * X^2 - 8 * X^1 + 3 * X^0 = 9 * X^4 + 2 * X^2 - 13 * X^1 - 4 * X^0"
+========================================
+Reduced: 5 * X^1 + 7 * X^0 = 0
+Polynomial degree: 1
+a: 5 | b: 7
+- 1.4
+
+========================================
+./computor "5 * X^6 - 7 * X^3 + 4 * X^1 - 9 * X^0 = 5 * X^6 - 7 * X^3 + 1 * X^1 + 6 * X^0"
+========================================
+Reduced: 3 * X^1 -15 * X^0 = 0
+Polynomial degree: 1
+a: 3 | b: -15
+5
+
+========================================
+./computor "7 * X^5 + 4 * X^3 + 9 * X^1 + 6 * X^0 = 7 * X^5 + 4 * X^3 + 2 * X^1 + 6 * X^0"
+========================================
+Reduced: 7 * X^1 = 0
+Polynomial degree: 1
+a: 7 | b: 0
 0
 
 ========================================
-./computor "9 * X^3 + 8 * X^2 + 7 * X^1 + 6 * X^0 = 9 * X^3 + 8 * X^2 + 2 * X^1 + 6 * X^0"
+./computor "3 * X^7 - 5 * X^4 + 8 * X^2 - 11 * X^1 - 4 * X^0 = 3 * X^7 - 5 * X^4 + 8 * X^2 - 2 * X^1 - 4 * X^0"
 ========================================
-Left terms: (term: 9, power: 3) (term: 8, power: 2) (term: 7, power: 1) (term: 6, power: 0)
-Right terms: (term: 9, power: 3) (term: 8, power: 2) (term: 2, power: 1) (term: 6, power: 0)
-Reduced: 5 * X^1 = 0
-Left terms: (term: 5, power: 1)
-Right terms: (none)
+Reduced: -9 * X^1 = 0
 Polynomial degree: 1
-
-========================================
-./computor "5 * X^2 + 4 * X^1 + 3 * X^0 = 5 * X^2 + 4 * X^1 + 3 * X^0"
-========================================
-Left terms: (term: 5, power: 2) (term: 4, power: 1) (term: 3, power: 0)
-Right terms: (term: 5, power: 2) (term: 4, power: 1) (term: 3, power: 0)
-Reduced: = 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "8 * X^3 - 6 * X^2 + 4 * X^1 - 2 * X^0 = 8 * X^3 - 6 * X^2 + 4 * X^1 - 2 * X^0"
-========================================
-Left terms: (term: 8, power: 3) (term: -6, power: 2) (term: 4, power: 1) (term: -2, power: 0)
-Right terms: (term: 8, power: 3) (term: -6, power: 2) (term: 4, power: 1) (term: -2, power: 0)
-Reduced: = 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "5 * X^0 = 3 * X^0"
-========================================
-Left terms: (term: 5, power: 0)
-Right terms: (term: 3, power: 0)
-Reduced: 2 * X^0 = 0
-Left terms: (term: 2, power: 0)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "7 * X^0 = 7 * X^0"
-========================================
-Left terms: (term: 7, power: 0)
-Right terms: (term: 7, power: 0)
-Reduced: = 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "0 * X^0 = 0 * X^0"
-========================================
-Left terms: (term: 0, power: 0)
-Right terms: (term: 0, power: 0)
-Reduced: = 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "8 * X^0 = 0 * X^0"
-========================================
-Left terms: (term: 8, power: 0)
-Right terms: (term: 0, power: 0)
-Reduced: 8 * X^0 = 0
-Left terms: (term: 8, power: 0)
-Right terms: (none)
-Polynomial degree: 0
-
-========================================
-./computor "5 * X^2 + 4 * X^1 + 3 * X^0 = 5 * X^2 + 1 * X^1 + 3 * X^0"
-========================================
-Left terms: (term: 5, power: 2) (term: 4, power: 1) (term: 3, power: 0)
-Right terms: (term: 5, power: 2) (term: 1, power: 1) (term: 3, power: 0)
-Reduced: 3 * X^1 = 0
-Left terms: (term: 3, power: 1)
-Right terms: (none)
-Polynomial degree: 1
-
-========================================
-./computor "7 * X^2 - 6 * X^1 + 2 * X^0 = 7 * X^2 + 4 * X^1 + 2 * X^0"
-========================================
-Left terms: (term: 7, power: 2) (term: -6, power: 1) (term: 2, power: 0)
-Right terms: (term: 7, power: 2) (term: 4, power: 1) (term: 2, power: 0)
-Reduced: -10 * X^1 = 0
-Left terms: (term: -10, power: 1)
-Right terms: (none)
-Polynomial degree: 1
-
-========================================
-./computor "3 * X^3 + 8 * X^1 + 5 * X^0 = 3 * X^3 + 2 * X^1 + 5 * X^0"
-========================================
-Left terms: (term: 3, power: 3) (term: 8, power: 1) (term: 5, power: 0)
-Right terms: (term: 3, power: 3) (term: 2, power: 1) (term: 5, power: 0)
-Reduced: 6 * X^1 = 0
-Left terms: (term: 6, power: 1)
-Right terms: (none)
-Polynomial degree: 1
-
-========================================
-./computor "3 * X^2 + 0 * X^1 + 2 * X^0 = 0 * X^1"
-========================================
-Left terms: (term: 3, power: 2) (term: 0, power: 1) (term: 2, power: 0)
-Right terms: (term: 0, power: 1)
-Reduced: 3 * X^2 + 2 * X^0 = 0
-Left terms: (term: 3, power: 2) (term: 2, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 3 | b: 0 | c: 2
-Discriminant is strictly negative, the two complex solutions are:
-0 + 0.816497i
-0 - 0.816497i
-
-========================================
-./computor "5 * X^2 + 7 * X^0 = 0 * X^1 + 2 * X^0"
-========================================
-Left terms: (term: 5, power: 2) (term: 7, power: 0)
-Right terms: (term: 0, power: 1) (term: 2, power: 0)
-Reduced: 5 * X^2 + 5 * X^0 = 0
-Left terms: (term: 5, power: 2) (term: 5, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 5 | b: 0 | c: 5
-Discriminant is strictly negative, the two complex solutions are:
-0 + 1i
-0 - 1i
-
-========================================
-./computor "4 * X^2 + 9 * X^0 = 0 * X^1 + 1 * X^0"
-========================================
-Left terms: (term: 4, power: 2) (term: 9, power: 0)
-Right terms: (term: 0, power: 1) (term: 1, power: 0)
-Reduced: 4 * X^2 + 8 * X^0 = 0
-Left terms: (term: 4, power: 2) (term: 8, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 4 | b: 0 | c: 8
-Discriminant is strictly negative, the two complex solutions are:
-0 + 1.41421i
-0 - 1.41421i
-
-========================================
-./computor "5 * X^2 + 3 * X^1 + 0 * X^0 = 0 * X^0"
-========================================
-Left terms: (term: 5, power: 2) (term: 3, power: 1) (term: 0, power: 0)
-Right terms: (term: 0, power: 0)
-Reduced: 5 * X^2 + 3 * X^1 = 0
-Left terms: (term: 5, power: 2) (term: 3, power: 1)
-Right terms: (none)
-Polynomial degree: 2
-a: 5 | b: 3 | c: 0
-Discriminant is strictly positive, the two solutions are:
-0
--0.6
-
-========================================
-./computor "2 * X^2 - 7 * X^1 + 0 * X^0 = 0 * X^0"
-========================================
-Left terms: (term: 2, power: 2) (term: -7, power: 1) (term: 0, power: 0)
-Right terms: (term: 0, power: 0)
-Reduced: + 2 * X^2 -7 * X^1 = 0
-Left terms: (term: 2, power: 2) (term: -7, power: 1)
-Right terms: (none)
-Polynomial degree: 2
-a: 2 | b: -7 | c: 0
-Discriminant is strictly positive, the two solutions are:
-3.5
+a: -9 | b: 0
 0
 
 ========================================
-./computor "9 * X^2 + 4 * X^1 + 0 * X^0 = 3 * X^1 + 0 * X^0"
+./computor "8 * X^5 + 4 * X^3 + 0 * X^1 + 7 * X^0 = 8 * X^5 + 4 * X^3 + 5 * X^1 + 2 * X^0"
 ========================================
-Left terms: (term: 9, power: 2) (term: 4, power: 1) (term: 0, power: 0)
-Right terms: (term: 3, power: 1) (term: 0, power: 0)
-Reduced: 9 * X^2 + 1 * X^1 = 0
-Left terms: (term: 9, power: 2) (term: 1, power: 1)
-Right terms: (none)
-Polynomial degree: 2
-a: 9 | b: 1 | c: 0
-Discriminant is strictly positive, the two solutions are:
-0
--0.111111
-
-========================================
-./computor "-5 * X^2 + 7 * X^1 - 3 * X^0 = -2 * X^2 + 4 * X^1 - 1 * X^0"
-========================================
-Left terms: (term: -5, power: 2) (term: 7, power: 1) (term: -3, power: 0)
-Right terms: (term: -2, power: 2) (term: 4, power: 1) (term: -1, power: 0)
-Reduced: -3 * X^2 + 3 * X^1 -2 * X^0 = 0
-Left terms: (term: -3, power: 2) (term: 3, power: 1) (term: -2, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: -3 | b: 3 | c: -2
-Discriminant is strictly negative, the two complex solutions are:
-0.5 - 0.645497i
-0.5 + 0.645497i
-
-========================================
-./computor "6 * X^2 - 9 * X^1 - 4 * X^0 = 2 * X^2 - 3 * X^1 - 8 * X^0"
-========================================
-Left terms: (term: 6, power: 2) (term: -9, power: 1) (term: -4, power: 0)
-Right terms: (term: 2, power: 2) (term: -3, power: 1) (term: -8, power: 0)
-Reduced: 4 * X^2 -6 * X^1 + 4 * X^0 = 0
-Left terms: (term: 4, power: 2) (term: -6, power: 1) (term: 4, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 4 | b: -6 | c: 4
-Discriminant is strictly negative, the two complex solutions are:
-0.75 + 0.661438i
-0.75 - 0.661438i
-
-========================================
-./computor "-3 * X^2 - 5 * X^1 + 7 * X^0 = -3 * X^2 + 2 * X^1 + 1 * X^0"
-========================================
-Left terms: (term: -3, power: 2) (term: -5, power: 1) (term: 7, power: 0)
-Right terms: (term: -3, power: 2) (term: 2, power: 1) (term: 1, power: 0)
-Reduced: -7 * X^1 + 6 * X^0 = 0
-Left terms: (term: -7, power: 1) (term: 6, power: 0)
-Right terms: (none)
+Reduced: -5 * X^1 + 5 * X^0 = 0
 Polynomial degree: 1
+a: -5 | b: 5
+1
 
 ========================================
-./computor "5.5 * X^2 + 2.5 * X^1 + 1.5 * X^0 = 2.5 * X^2 + 2.5 * X^1 + 0.5 * X^0"
+./computor "6 * X^6 - 3 * X^4 + 0 * X^2 - 9 * X^1 + 4 * X^0 = 6 * X^6 - 3 * X^4 + 0 * X^2 + 3 * X^1 - 8 * X^0"
 ========================================
-Left terms: (term: 5.5, power: 2) (term: 2.5, power: 1) (term: 1.5, power: 0)
-Right terms: (term: 2.5, power: 2) (term: 2.5, power: 1) (term: 0.5, power: 0)
-Reduced: 3 * X^2 + 1 * X^0 = 0
-Left terms: (term: 3, power: 2) (term: 1, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 3 | b: 0 | c: 1
-Discriminant is strictly negative, the two complex solutions are:
-0 + 0.57735i
-0 - 0.57735i
+Reduced: -12 * X^1 + 12 * X^0 = 0
+Polynomial degree: 1
+a: -12 | b: 12
+1
 
 ========================================
-./computor "0.5 * X^2 + 0.25 * X^1 + 0.75 * X^0 = 0.25 * X^2 + 0.25 * X^1 + 0.25 * X^0"
+./computor "1000 * X^8 - 500 * X^6 + 250 * X^4 + 750 * X^2 + 1234 * X^1 - 987 * X^0 = 1000 * X^8 - 500 * X^6 + 250 * X^4 + 750 * X^2 + 234 * X^1 - 487 * X^0"
 ========================================
-Left terms: (term: 0.5, power: 2) (term: 0.25, power: 1) (term: 0.75, power: 0)
-Right terms: (term: 0.25, power: 2) (term: 0.25, power: 1) (term: 0.25, power: 0)
-Reduced: 0.25 * X^2 + 0.5 * X^0 = 0
-Left terms: (term: 0.25, power: 2) (term: 0.5, power: 0)
-Right terms: (none)
-Polynomial degree: 2
-a: 0.25 | b: 0 | c: 0.5
-Discriminant is strictly negative, the two complex solutions are:
-0 + 1.41421i
-0 - 1.41421i
+Reduced: 1000 * X^1 -500 * X^0 = 0
+Polynomial degree: 1
+a: 1000 | b: -500
+0.5
 
 ========================================
-./computor "8 * X^0 - 6 * X^1 + 0 * X^2 - 5.6 * X^3 = 3 * X^0"
+./computor "-999 * X^7 + 888 * X^5 - 777 * X^3 + 666 * X^1 + 555 * X^0 = -999 * X^7 + 888 * X^5 - 777 * X^3 - 444 * X^1 - 222 * X^0"
 ========================================
-Left terms: (term: 8, power: 0) (term: -6, power: 1) (term: 0, power: 2) (term: -5.6, power: 3)
-Right terms: (term: 3, power: 0)
-Reduced: -5.6 * X^3 -6 * X^1 + 5 * X^0 = 0
-Left terms: (term: -5.6, power: 3) (term: -6, power: 1) (term: 5, power: 0)
-Right terms: (none)
-The polynomial degree is strictly greater than 2, I can't solve.
+Reduced: 1110 * X^1 + 777 * X^0 = 0
+Polynomial degree: 1
+a: 1110 | b: 777
+- 0.7
 
 ========================================
-./computor "5 * X^3 + 4 * X^2 + 2 * X^1 + 1 * X^0 = 2 * X^2 + 1 * X^1"
+./computor "12 * X^10 - 7 * X^7 + 4 * X^3 + 15 * X^1 - 6 * X^0 = 12 * X^10 - 7 * X^7 + 4 * X^3 + 5 * X^1 + 9 * X^0"
 ========================================
-Left terms: (term: 5, power: 3) (term: 4, power: 2) (term: 2, power: 1) (term: 1, power: 0)
-Right terms: (term: 2, power: 2) (term: 1, power: 1)
-Reduced: 5 * X^3 + 2 * X^2 + 1 * X^1 + 1 * X^0 = 0
-Left terms: (term: 5, power: 3) (term: 2, power: 2) (term: 1, power: 1) (term: 1, power: 0)
-Right terms: (none)
-The polynomial degree is strictly greater than 2, I can't solve.
+Reduced: 10 * X^1 -15 * X^0 = 0
+Polynomial degree: 1
+a: 10 | b: -15
+1.5
 
 ========================================
-./computor "4 * X^4 + 3 * X^3 + 2 * X^2 + 1 * X^0 = 1 * X^3 + 1 * X^0"
+./computor "3 * X^12 + 8 * X^9 - 5 * X^4 - 11 * X^1 + 7 * X^0 = 3 * X^12 + 8 * X^9 - 5 * X^4 + 6 * X^1 - 3 * X^0"
 ========================================
-Left terms: (term: 4, power: 4) (term: 3, power: 3) (term: 2, power: 2) (term: 1, power: 0)
-Right terms: (term: 1, power: 3) (term: 1, power: 0)
-Reduced: 4 * X^4 + 2 * X^3 + 2 * X^2 = 0
-Left terms: (term: 4, power: 4) (term: 2, power: 3) (term: 2, power: 2)
-Right terms: (none)
-The polynomial degree is strictly greater than 2, I can't solve.
+Reduced: -17 * X^1 + 10 * X^0 = 0
+Polynomial degree: 1
+a: -17 | b: 10
+0.588235
 
 ========================================
-./computor "5 * X^4 + 3 * X^3 + 2 * X^2 = 5 * X^4 + 3 * X^3 + 2 * X^2"
+./computor "4 * X^1 + 9 * X^4 + 2 * X^0 + 7 * X^3 = 1 * X^0 + 9 * X^4 + 6 * X^1 + 7 * X^3"
 ========================================
-Left terms: (term: 5, power: 4) (term: 3, power: 3) (term: 2, power: 2)
-Right terms: (term: 5, power: 4) (term: 3, power: 3) (term: 2, power: 2)
-Reduced: 0= 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
+Reduced: -2 * X^1 + 1 * X^0 = 0
+Polynomial degree: 1
+a: -2 | b: 1
+0.5
 
 ========================================
-./computor "7 * X^3 + 4 * X^2 + 9 * X^1 = 7 * X^3 + 4 * X^2 + 9 * X^1"
+./computor "8 * X^2 - 3 * X^6 + 5 * X^1 + 9 * X^5 - 4 * X^0 = 8 * X^2 - 3 * X^6 + 9 * X^5 - 2 * X^1 - 4 * X^0"
 ========================================
-Left terms: (term: 7, power: 3) (term: 4, power: 2) (term: 9, power: 1)
-Right terms: (term: 7, power: 3) (term: 4, power: 2) (term: 9, power: 1)
-Reduced: 0= 0
-Left terms: (none)
-Right terms: (none)
-Polynomial degree: 0
+Reduced: 7 * X^1 = 0
+Polynomial degree: 1
+a: 7 | b: 0
+0
+
+========================================
+./computor "1.25 * X^5 - 2.75 * X^3 + 4.125 * X^2 + 6.625 * X^1 - 3.5 * X^0 = 1.25 * X^5 - 2.75 * X^3 + 4.125 * X^2 + 1.625 * X^1 + 2.5 * X^0"
+========================================
+Reduced: 5 * X^1 -6 * X^0 = 0
+Polynomial degree: 1
+a: 5 | b: -6
+1.2
+
+========================================
+./computor "0.125 * X^8 + 0.75 * X^6 - 1.625 * X^4 + 2.5 * X^1 + 0.875 * X^0 = 0.125 * X^8 + 0.75 * X^6 - 1.625 * X^4 - 3.5 * X^1 - 1.125 * X^0"
+========================================
+Reduced: 6 * X^1 + 2 * X^0 = 0
+Polynomial degree: 1
+a: 6 | b: 2
+- 0.333333
 

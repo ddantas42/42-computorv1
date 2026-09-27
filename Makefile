@@ -10,7 +10,7 @@ MAIN_FILES = main.cpp equation.cpp
 PRE_SOLVE_FILES = calculate_terms.cpp reduce.cpp create_reduce_string.cpp
 PRE_SOLVE_DIR = ./src/pre-solve/
 
-SOLVER_FILES = solve.cpp solve_degree_2.cpp
+SOLVER_FILES = solve.cpp solve_degree_2.cpp solve_degree_1.cpp
 SOLVER_DIR = ./src/solver/
 
 SRC =   $(addprefix $(SRCDIR), $(MAIN_FILES)) \

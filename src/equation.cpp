@@ -1,8 +1,7 @@
 #include <equation.hpp>
 
 Equation::Equation() : equation("")
-{
-}
+{}
 
 Equation::Equation(const std::string &equation) : equation(equation), equation_reduced("")
 {
@@ -22,5 +21,14 @@ Equation::Equation(const Equation &other)
 }
 
 Equation::~Equation()
+{}
+
+double Equation::find_term_in_left_terms_by_power(int power)
 {
+	for (auto it = this->left_terms.begin(); it != this->left_terms.end(); it++)
+	{
+		if (power == (*it).power)
+			return (*it).term;
+	}
+	return 0;
 }

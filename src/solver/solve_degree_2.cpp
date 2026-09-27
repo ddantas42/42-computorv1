@@ -21,16 +21,6 @@ static void print_complex(std::complex<double> &num)
 		std::cout << "- " << -num.imag() << "i\n";
 }
 
-static double find_term_in_equation_by_power(std::vector<t_element> vector, int power)
-{
-	for (auto it = vector.begin(); it != vector.end(); it++)
-	{
-		if (power == (*it).power)
-			return (*it).term;
-	}
-	return 0;
-}
-
 void solve_degree_2(Equation &Eq)
 {
 	double a = 0;
@@ -38,9 +28,9 @@ void solve_degree_2(Equation &Eq)
 	double c = 0;
 	double delta = 0;
 
-	a = find_term_in_equation_by_power(Eq.left_terms, 2);  // will ALWAYS exists due the max_power being checked before this function triggers
-	b = find_term_in_equation_by_power(Eq.left_terms, 1);
-	c = find_term_in_equation_by_power(Eq.left_terms, 0);
+	a = Eq.find_term_in_left_terms_by_power(2);  // will ALWAYS exists due the max_power being checked before this function triggers
+	b = Eq.find_term_in_left_terms_by_power(1);
+	c = Eq.find_term_in_left_terms_by_power(0);
 
 	std::cout << "a: " << a << " | b: " << b << " | c: " << c << std::endl;
 

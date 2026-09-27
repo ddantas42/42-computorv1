@@ -28,7 +28,9 @@ class Equation
 		Equation(const Equation &other);
 		~Equation();
 
-		void calculate_terms();
+		double find_term_in_left_terms_by_power(int power);
+
+		void	calculate_terms();
 
 		std::vector<t_element> left_terms;
 		std::vector<t_element> right_terms;
@@ -48,5 +50,6 @@ void	create_reduce_string(Equation &Eq);
 void	solve(Equation &Eq);
 void	solve_degree_2(Equation &Eq);
 void	solve_degree_1(Equation &Eq);
+void	solve_degree_0(Equation &Eq);
 
 #endif

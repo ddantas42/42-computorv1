@@ -10,7 +10,7 @@ void solve_degree_1(Equation &Eq)
 	a = Eq.find_term_in_left_terms_by_power(1);  // will ALWAYS exists due the max_power being checked before this function triggers
 	b = Eq.find_term_in_left_terms_by_power(0);
 
-	std::cout << "a: " << a << " | b: " << b << std::endl;
+	// std::cout << "a: " << a << " | b: " << b << std::endl;
 
 	solution = -b / a;
 	Eq.solution_x1 = Eq.solution_x2 = std::complex<double>(solution);

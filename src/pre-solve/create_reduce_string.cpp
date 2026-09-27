@@ -4,7 +4,7 @@
 
 void create_reduce_string(Equation &Eq)
 {
-	bool any_element_printed;
+	bool any_element_printed = false;
 
 	for (auto it = Eq.left_terms.begin() ; it != Eq.left_terms.end() ; it++)
 	{

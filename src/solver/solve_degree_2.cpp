@@ -32,7 +32,7 @@ void solve_degree_2(Equation &Eq)
 	b = Eq.find_term_in_left_terms_by_power(1);
 	c = Eq.find_term_in_left_terms_by_power(0);
 
-	std::cout << "a: " << a << " | b: " << b << " | c: " << c << std::endl;
+	// std::cout << "a: " << a << " | b: " << b << " | c: " << c << std::endl;
 
 	delta = b * b - 4 * a * c;
 
@@ -57,7 +57,18 @@ void solve_degree_2(Equation &Eq)
 	Eq.solution_x1 = (-b + std::sqrt(std::abs(delta))) / (2 * a);
 	Eq.solution_x2 = (-b - std::sqrt(std::abs(delta))) / (2 * a);
 
-	std::cout << Eq.solution_x1.real() << std::endl;
+	// Fix std::cout outputing -0
+	if (Eq.solution_x1.real() == 0)
+		std::cout << 0 << std::endl;
+	else
+		std::cout << Eq.solution_x1.real()  << std::endl;
+	
 	if (delta != 0)
-		std::cout << Eq.solution_x2.real() << std::endl;
+	{
+		if (Eq.solution_x2.real() == 0)
+			std::cout << 0 << std::endl;
+		else
+			std::cout << Eq.solution_x2.real() << std::endl;
+
+	}
 }

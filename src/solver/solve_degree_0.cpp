@@ -10,6 +10,6 @@ void	solve_degree_0(Equation &Eq)
 	if (a == 0)
 		std::cout << "Any real number is a solution." << std::endl;
 	else		
-		std::cout << "Solution impossible." << std::endl;
+		std::cout << "No solution." << std::endl;
 
 }

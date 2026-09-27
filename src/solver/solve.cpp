@@ -23,7 +23,7 @@ void solve(Equation &Eq)
 	else if (Eq.max_power == 0)
 	{
 		std::cout << "Polynomial degree: 0" << std::endl;
-		// solve_degree_0(Eq);
+		solve_degree_0(Eq);
 	}
 	else // Should never trigger since checked in parsing
 		throw std::invalid_argument("Invalid Polynomial: " + std::to_string(Eq.max_power));

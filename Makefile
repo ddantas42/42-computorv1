@@ -18,6 +18,7 @@ SRC =   $(addprefix $(SRCDIR), $(MAIN_FILES)) \
 		$(addprefix $(PRE_SOLVE_DIR), $(PRE_SOLVE_FILES))
 		
 OBJS = $(SRC:.cpp=.o)
+DEPS = $(SRC:.cpp=.d)
 
 all: $(NAME)
 
@@ -25,10 +26,11 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -MMD -MP -c -o $@ $<
 
 clean:
 	$(RM) $(OBJS)
+	$(RM) $(DEPS)
 
 fclean: clean
 	$(RM) $(NAME)
@@ -36,3 +38,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
+-include $(DEPS)

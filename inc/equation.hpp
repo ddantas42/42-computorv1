@@ -6,7 +6,7 @@
 #include <complex>
 
 typedef struct s_element
-{
+{ 
 	double term;
 	int power;
 	
